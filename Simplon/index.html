@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GESTION_DES_APPRENANTS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/style.css" />
+    <link rel="stylesheet"  href="font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="php/voir_la_liste.php">
+    
+</head>
+<body>
+  
+
+                                         <!-- L'entete de l'interface -->
+<div class="container "> <!-- /*Le div général du body*/ -->
+    <div class="row logo-et-titre">
+        <div class="col-1"><img src="images/simplon.png" alt="..." class="logo"></div>   <!-- Le logo -->
+        <div class="col-11" ><h1 class="titre "> SIMPLON BURKINA</h1></div>
+    </div>
+
+                                              <!-- La barre de navigation -->
+<DIV class="div-du-header sticky-top">
+  
+ <nav class="navbar navbar-expand-lg  div-du-header " >
+    <button class="navbar-toggler responsive_button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+   <button type="button" class="navbar-nav mr-auto diffrent"  title="Voir la liste">
+      <a class=" nav-item active les-liens" href="php/voir_la_liste.php" class=""> Voir la liste<span class="sr-only ecritures2"></span>
+      <img src="images/liste.jpg" alt="" width="20" height="20" title=""></a>
+ </div>
+                                              
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+   <button type="button" class="navbar-nav mr-auto diffrent"  title="">
+      <a class="nav-item active les-liens" href="php/imprimer.php">Imprimer
+      <img src="images/imprimer.png" alt="" width="20" height="20" title="imprimer la liste"></a>
+ </div>
+                                              
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <button type="button" class="navbar-nav mr-auto diffrent"  title="Apprenants">
+       <a class=" nav-item active les-liens" href="index.html">Apprenants     
+   <img src="images/download.png" alt="" width="30" height="30" title="Apprenants"></a>
+</div>
+
+
+
+</nav>
+ </DIV>   
+ 
+                                         <!-- Le corps du travail -->
+
+<DIv class="le-titre-et-le-sous-titre"><!-- le div général du corps -->
+     <div class=""><H3 class="titre-general"> BIENVENU SUR VOTRE ESPACE DE TRAVAIL SIMPLON BURKINA</H3></div>
+     <div class=""><h4 class="titre_soustitre">ENREGISTRER UN APPRENANT</h4></div>
+</DIv>
+
+                                                    <!-- Le formulaire -->
+   
+<div class="le-div-general-du-formulaire">   
+ <form action="php/traitement.php" method="POST" class="formulaire" enctype="multipart/form-data">
+   
+    <div class="div-du-sous-titre-parent-et-des-tirest">
+    <div class="row la-ligne-blanche">
+    <div class=" col les-tirest"></div>
+  </div>
+                                                 <!-- Partie du formulaire sur les apprénants -->
+  <div class="row ">
+    <div class="col-6 partie-sur-information-apprenant " > INFORMATION SUR L'APPRENANT</div>
+  </div>
+  </div>
+
+
+ 
+  <div class="row id_photo" >
+
+    <div class="col ">
+     <input type="file"  name="photo" class="parcourir"  required onchange="afficherLaPhoto(this, idImage);"><br>
+     <img src="images/download.png" width="133px"   height="auto"  title="Photo d'identité" id="idImage"/> 
+  </div>
+
+</div>
+
+
+<div class="formualire-apprenant"> 
+       <div class="les-champs-du-formulaire "> 
+
+    <div class="row champ">
+      <div class="col ">
+          <input type="text" class="form-control les-champs" placeholder="Nom" name="nomApprenant" required >
+      </div>
+      <div class="col">
+        <input type="text" class="form-control les-champs" placeholder="Ville d'origine" name="ville" required>
+      </div>
+    </div>
+
+    <div class="row champ">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Prenom" name="prenomApprenant" required >
+      </div>
+      <div class="col">
+      <input type="text" class="form-control" placeholder="Etablissement d'origine" name="etablissement" required>
+      </div>
+  </div>
+
+    <div class="row champ">
+      <div class="col">
+          <input type="date" class="form-control" placeholder="Date de naissance" name="dateDeNaissance" required>
+      </div>
+      <div class="col">
+          <input type="text" class="form-control" placeholder="Formation d'origine" name="formation" required >
+      </div>
+    </div>
+
+    <div class="row champ">
+        <div class="col">
+           <input type="text" class="form-control" placeholder="Lieu de naisance" name="lieuDeNaissance" required>
+        </div>
+        <div class="col">
+            <input type="tel" class="form-control" placeholder="Telephone" name="telephoneApprenant" required>
+        </div>
+    </div>
+
+    <div class="row champ">
+        <div class="col">
+          <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="genre" required >
+              <option value="Homme">Homme</option>
+              <option value="Femme">Femme</option>
+          </select>
+        </div>
+        <div class="col">
+              <input type="email" class="form-control" placeholder="Email" required="true" name="email">
+        </div>
+    </div>
+    </div>
+</div>
+                                          <!-- la partie du formulaire sur le tuteur -->
+
+<div class="formulaire-parent">
+   <div class="div-du-sous-titre-apprenats-et-des-tirest">
+      <div class="les-tirest-infos-tuteur"></div>
+    <div class="row">
+      <div class="col-6 partie-sur-information-tuteur" > INFORMATION SUR LE TUTEUR</div>
+    </div>
+      
+<div class="les-champs-du-formulaire">
+   <div class="row champ">
+      <div class="col ">
+          <input type="text" class="form-control" placeholder="NOM" name="nomTuteur" required >
+      </div>
+      <div class="col">
+          <input type="text" class="form-control" placeholder="PROFESSION" name="profession" required >
+      </div>
+    </div>
+ 
+   <div class="row champ">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="PRENOM" name="prenomTuteur" required >
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="TELEPHONE" name="telephoneTuteur" required >
+      </div>
+    </div>
+ 
+  <div class="row la-classe-de-enregistrer-et-de-annuler">
+    <div class="col bouton-enregistrer">
+      <input class="btn btn-primary Enregistrer" type="submit" value="Enregistrer" ></div>
+    <div class="col">
+      <input class="btn btn-primary Annuler" type="reset" value="Annuler">
+    </div>
+  </div>
+ </div>
+</div>
+</div>
+</form>
+</div>
+
+</div>
+
+                                        <!-- Le Footer de l'interface d'utilisateur -->
+
+<div class="container">
+  <footer class="le-div-global-du-footer">
+    <div class="row footer">
+      <div class="col-1"><img src="images/simplon.png" alt="..." class="logo"></div>
+      <div class="col-11 le-copy-du-footer">&#9400;opyright simplon burkina tous droits reservés</div>
+    </div>
+  </footer>
+</div> 
+            <script src="JS/barre_de_recherche.js"></script>
+            <script src="JS/affichage_photo.js"></script>
+            <script src="dist/js/jquery.slim.min.js"></script>
+            <script src="dist/js/bootstrap.min.js"></script>
+         
+</body>
+</html>

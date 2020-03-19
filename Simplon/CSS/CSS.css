@@ -1,0 +1,28 @@
+
+  .entete {
+      background-color: #bf0909;
+      text-align: center;
+      color: white;
+      font-weight: bolder;
+      margin-right: 50px;
+  }
+
+  .le-corps{
+      background-color: #d9d9d9;
+  }
+  .table-hover{
+      background-color: white;
+  }
+  .titre{
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: bold;
+        text-decoration: underline;
+     font-size: 20px;
+  }
+#ghost{
+    background-color: ghostwhite;
+}
+ 
+ 
+  

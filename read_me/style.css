@@ -1,0 +1,39 @@
+table{
+
+    margin: 30px,30px,30px,30px;
+    text-align: center;
+}
+
+body{
+    background-color: azure;
+}
+.guide_read_me{
+    color: blueviolet;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.guide_read{
+
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    font-size: 18px;
+}
+
+h3{
+
+    font-size: 18px;
+}
+
+.les_lien{
+    font-size: 18px;
+    color:green;
+}
